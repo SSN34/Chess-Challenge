@@ -64,10 +64,12 @@ namespace ChessChallenge.Application
 
         static void UpdateCamera(int screenWidth, int screenHeight)
         {
-            cam = new Camera2D();
-            cam.target = new Vector2(0, 15);
-            cam.offset = new Vector2(screenWidth / 2f, screenHeight / 2f);
-            cam.zoom = screenWidth / 1280f * 0.7f;
+            cam = new Camera2D
+            {
+                target = new Vector2(0, 15),
+                offset = new Vector2(screenWidth / 2f, screenHeight / 2f),
+                zoom = screenWidth / 1280f * 0.7f
+            };
         }
 
 

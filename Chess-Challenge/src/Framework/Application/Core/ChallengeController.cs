@@ -23,7 +23,7 @@ namespace ChessChallenge.Application
         }
 
         // Game state
-        Random rng;
+        readonly Random rng;
         int gameID;
         bool isPlaying;
         Board board;

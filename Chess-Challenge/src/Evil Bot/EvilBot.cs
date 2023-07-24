@@ -8,7 +8,7 @@ namespace ChessChallenge.Example
     public class EvilBot : IChessBot
     {
         // Piece values: null, pawn, knight, bishop, rook, queen, king
-        int[] pieceValues = { 0, 100, 300, 300, 500, 900, 10000 };
+        readonly int[] pieceValues = { 0, 100, 300, 300, 500, 900, 10000 };
 
         public Move Think(Board board, Timer timer)
         {
@@ -43,7 +43,7 @@ namespace ChessChallenge.Example
         }
 
         // Test if this move gives checkmate
-        bool MoveIsCheckmate(Board board, Move move)
+        static bool MoveIsCheckmate(Board board, Move move)
         {
             board.MakeMove(move);
             bool isMate = board.IsInCheckmate();
